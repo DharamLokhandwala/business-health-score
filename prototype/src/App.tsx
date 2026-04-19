@@ -225,7 +225,7 @@ export default function App() {
           {/* {tweakHeadline === 'sell' && <>Is your business <em>ready to sell?</em></>}
           {tweakHeadline === 'score' && <>A two-minute <em>score</em> on the business you built.</>} */}
         </h1>
-        <div style={{ marginTop: '32px', display: 'flex', justifyContent: 'center' }}>
+        <div className="result-cta" style={{ marginTop: '32px', display: 'flex', justifyContent: 'center' }}>
           <button className="primary" onClick={() => setShowModal(true)}>
             Get Your Score Now
           </button>
