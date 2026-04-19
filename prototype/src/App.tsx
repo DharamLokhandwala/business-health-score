@@ -226,7 +226,7 @@ export default function App() {
           {tweakHeadline === 'score' && <>A two-minute <em>score</em> on the business you built.</>} */}
         </h1>
         <div style={{ marginTop: '32px', display: 'flex', justifyContent: 'center' }}>
-          <button className="primary" onClick={() => setShowModal(true)} style={{ padding: '14px 28px', fontSize: '12px' }}>
+          <button className="primary" onClick={() => setShowModal(true)}>
             Get Your Score Now
           </button>
         </div>
