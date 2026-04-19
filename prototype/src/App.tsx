@@ -307,55 +307,55 @@ export default function App() {
         else if (sc >= 41) dialColor = '#C9943A';
 
         return (
-        <section className="result is-sample" style={{ display: 'block' }}>
-          <div className="sample-banner" aria-hidden="true">
-            <span className="sb-dot"></span>
-            <span>Example result &mdash; this could be your score</span>
-          </div>
-          <div className="sample-watermark" aria-hidden="true">SAMPLE</div>
-          <div className="result-top">
-            <div className="tag">What Your Score Tells You</div>
-            <div className="asof">Sample &middot; Your results will appear here</div>
-            <div className="res-sec verdict-sec">
-              <div className="verdict-main">
-                <h2 className="verdict-head">Sellable in <em>12&ndash;18 months.</em></h2>
-                <div className="verdict-sub">Business Health Score: <strong id="scoreLine">{sampleScore}/100</strong></div>
-              </div>
-              <div style={{ position: 'relative', width: '200px', height: '100px', flexShrink: 0, overflow: 'hidden' }}>
-                <svg viewBox="0 0 280 140" width="100%" height="100%" style={{ position: 'absolute', top: 0, left: 0 }}>
-                  <line x1="15" y1="130" x2="25" y2="130" stroke="rgba(245,237,216,0.2)" strokeWidth="1" />
-                  <line x1="140" y1="10" x2="140" y2="20" stroke="rgba(245,237,216,0.2)" strokeWidth="1" />
-                  <line x1="265" y1="130" x2="255" y2="130" stroke="rgba(245,237,216,0.2)" strokeWidth="1" />
+          <section className="result is-sample" style={{ display: 'block' }}>
+            <div className="sample-banner" aria-hidden="true">
+              <span className="sb-dot"></span>
+              <span>Example result &mdash; this could be your score</span>
+            </div>
+            <div className="sample-watermark" aria-hidden="true">SAMPLE</div>
+            <div className="result-top">
+              <div className="tag">What Your Score Tells You</div>
+              <div className="asof">Sample &middot; Your results will appear here</div>
+              <div className="res-sec verdict-sec">
+                <div className="verdict-main">
+                  <h2 className="verdict-head">Sellable in <em>12&ndash;18 months.</em></h2>
+                  <div className="verdict-sub">Business Health Score: <strong id="scoreLine">{sampleScore}/100</strong></div>
+                </div>
+                <div style={{ position: 'relative', width: '200px', height: '100px', flexShrink: 0, overflow: 'hidden' }}>
+                  <svg viewBox="0 0 280 140" width="100%" height="100%" style={{ position: 'absolute', top: 0, left: 0 }}>
+                    <line x1="15" y1="130" x2="25" y2="130" stroke="rgba(245,237,216,0.2)" strokeWidth="1" />
+                    <line x1="140" y1="10" x2="140" y2="20" stroke="rgba(245,237,216,0.2)" strokeWidth="1" />
+                    <line x1="265" y1="130" x2="255" y2="130" stroke="rgba(245,237,216,0.2)" strokeWidth="1" />
 
-                  <path d="M 20 130 A 120 120 0 0 1 260 130" fill="none" stroke="rgba(245,237,216,0.15)" strokeWidth="12" />
-                  <path 
-                    d="M 20 130 A 120 120 0 0 1 260 130" 
-                    fill="none" stroke={dialColor} strokeWidth="12" 
-                    strokeDasharray={C_Circumference} strokeDashoffset={dialOffset} 
-                    style={{ transition: 'stroke-dashoffset 0.8s ease-out' }} 
-                  />
-                  
-                  <line 
-                    x1="140" y1="130" x2="140" y2="20" stroke="var(--ink)" strokeWidth="2" 
-                    style={{ transformOrigin: '140px 130px', transform: `rotate(${dialProgress * 180 - 90}deg)`, transition: 'transform 0.8s ease-out' }} 
-                  />
-                  <circle cx="140" cy="130" r="4" fill="var(--ink)" />
-                </svg>
-                <div style={{ position: 'absolute', bottom: '10px', width: '100%', textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'var(--serif)', fontSize: '42px', color: 'var(--ink)', lineHeight: '1' }}>{sampleScore}</div>
-                  <div style={{ fontFamily: 'var(--sans)', fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ink-muted)', marginTop: '4px' }}>/ 100</div>
+                    <path d="M 20 130 A 120 120 0 0 1 260 130" fill="none" stroke="rgba(245,237,216,0.15)" strokeWidth="12" />
+                    <path
+                      d="M 20 130 A 120 120 0 0 1 260 130"
+                      fill="none" stroke={dialColor} strokeWidth="12"
+                      strokeDasharray={C_Circumference} strokeDashoffset={dialOffset}
+                      style={{ transition: 'stroke-dashoffset 0.8s ease-out' }}
+                    />
+
+                    <line
+                      x1="140" y1="130" x2="140" y2="20" stroke="var(--ink)" strokeWidth="2"
+                      style={{ transformOrigin: '140px 130px', transform: `rotate(${dialProgress * 180 - 90}deg)`, transition: 'transform 0.8s ease-out' }}
+                    />
+                    <circle cx="140" cy="130" r="4" fill="var(--ink)" />
+                  </svg>
+                  <div style={{ position: 'absolute', bottom: '10px', width: '100%', textAlign: 'center' }}>
+                    <div style={{ fontFamily: 'var(--serif)', fontSize: '42px', color: 'var(--ink)', lineHeight: '1' }}>{sampleScore}</div>
+                    <div style={{ fontFamily: 'var(--sans)', fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ink-muted)', marginTop: '4px' }}>/ 100</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="verdict-block">
-            <p className="verdict-body">See what's holding your score back &mdash; and what to fix first.</p>
-          </div>
-          <div className="result-cta">
-            <button className="primary" onClick={() => setShowModal(true)}>Get Your Score Now</button>
-            {/* <a href="#" style={{ marginLeft: 12, color: 'var(--ink-muted)', fontSize: 12 }} onClick={(e) => { e.preventDefault(); setSampleScore(null); }}>← Go back</a> */}
-          </div>
-        </section>
+            <div className="verdict-block">
+              <p className="verdict-body">See what's holding your score back &mdash; and what to fix first.</p>
+            </div>
+            <div className="result-cta">
+              <button className="primary" onClick={() => setShowModal(true)}>Get Your Score Now</button>
+              {/* <a href="#" style={{ marginLeft: 12, color: 'var(--ink-muted)', fontSize: 12 }} onClick={(e) => { e.preventDefault(); setSampleScore(null); }}>← Go back</a> */}
+            </div>
+          </section>
         );
       })()}
 
